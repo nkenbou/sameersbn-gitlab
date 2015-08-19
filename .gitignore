@@ -1,3 +1,5 @@
 .env
 .vagrant
 gitlab
+linked/src/github.com
+linked/pkg

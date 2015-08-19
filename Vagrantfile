@@ -88,9 +88,21 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
+  config.vm.provision "docker"
+
+  config.vm.provision "shell", inline: <<-PREPARE
+    echo 'DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"' >> /etc/default/docker
+    restart docker
+  PREPARE
+
   config.vm.provision "docker" do |d|
+    d.run "redis", args: "-d -P --name upstreams"
+    d.build_image "/vagrant", args: "-t nkenbou/dproxy"
+    d.run "nkenbou/dproxy", args: "-d -p 80:80 --name dproxy --link upstreams:redis"
+    d.run "ubuntu:trusty", args: "-d --name linked -v /vagrant/linked/bin/linked:/linked --link upstreams:redis -e DOCKER_HOST=tcp://172.17.42.1:2375", cmd: "/linked"
+
     d.run "sameersbn/mysql:latest", args: "--name gitlab-mysql -d -e 'DB_NAME=gitlabhq_production' -e 'DB_USER=gitlab' -e 'DB_PASS=password' -v /vagrant/gitlab/mysql:/var/lib/mysql"
     d.run "sameersbn/redis:latest", args: "--name gitlab-redis -d -v /vagrant/gitlab/redis:/var/lib/redis"
-    d.run "sameersbn/gitlab:7.13.4", args: "--name gitlab -d --link gitlab-mysql:mysql --link gitlab-redis:redisio -p 10022:22 -p 10080:80 -e 'GITLAB_HOST=192.168.33.10' -e 'GITLAB_PORT=10080' -e 'GITLAB_SSH_PORT=10022' -e 'SMTP_USER=#{ENV['SMTP_USER']}' -e 'SMTP_PASS=#{ENV['SMTP_PASS']}' -v /vagrant/gitlab/gitlab:/home/git/data -v /vagrant/gitlab/log:/var/log/gitlab"
+    d.run "sameersbn/gitlab:7.13.4", args: "--name gitlab -d --link gitlab-mysql:mysql --link gitlab-redis:redisio -p #{ENV['GITLAB_SSH_PORT']}:22 -P -e 'GITLAB_HOST=#{ENV['GITLAB_HOST']}' -e 'GITLAB_SSH_PORT=#{ENV['GITLAB_SSH_PORT']}' -e 'SMTP_USER=#{ENV['SMTP_USER']}' -e 'SMTP_PASS=#{ENV['SMTP_PASS']}' -v /vagrant/gitlab/gitlab:/home/git/data -v /vagrant/gitlab/log:/var/log/gitlab"
   end
 end
