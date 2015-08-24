@@ -1,0 +1,30 @@
+gitlab-mysql:
+  container_name: gitlab-mysql
+  image: sameersbn/mysql:latest
+  volumes:
+    - /vagrant/gitlab/gitlab/mysql:/var/lib/mysql
+  environment:
+    DB_NAME: gitlabhq_production
+    DB_USER: gitlab
+    DB_PASS: password
+
+gitlab-redis:
+  container_name: gitlab-redis
+  image: sameersbn/redis:latest
+  volumes:
+    - /vagrant/gitlab/gitlab/redis:/var/lib/redis
+
+gitlab:
+  container_name: gitlab
+  image: sameersbn/gitlab:7.13.4
+  links:
+    - gitlab-mysql:mysql
+    - gitlab-redis:redisio
+  ports:
+    - "10022:22"
+    - "80"
+    - "443"
+  volumes:
+    - /vagrant/gitlab/gitlab/gitlab:/home/git/data
+    - /vagrant/gitlab/gitlab/log:/var/log/gitlab
+  env_file: .env
