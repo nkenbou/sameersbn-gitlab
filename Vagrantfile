@@ -77,6 +77,7 @@ Vagrant.configure(2) do |config|
     vb.memory = $vb_memory
     vb.cpus = $vb_cpus
     vb.customize ["modifyvm", :id, "--ostype", "Ubuntu_64"]
+    vb.customize ["setextradata", :id, "VBoxInternal/Devices/VMMDev/0/Config/GetHostTimeDisabled", 0]
   end
 
   # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
@@ -93,9 +94,12 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
-  config.vm.provision "docker"
 
+  config.vm.provision "docker"
   config.vm.provision "shell", inline: <<-PREPARE
+    echo "Asia/Tokyo" | tee /etc/timezone
+    dpkg-reconfigure --frontend noninteractive tzdata
+
     echo 'DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"' >> /etc/default/docker
     restart docker
     curl -sS -L https://github.com/docker/compose/releases/download/1.4.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
