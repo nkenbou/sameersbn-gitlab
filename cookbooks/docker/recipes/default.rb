@@ -21,10 +21,8 @@ bash "install docker-compose" do
   not_if 'which docker-compose'
 end
 
-bash "edit /etc/default/docker" do
-  code <<-EOC
-    echo 'DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"' >> /etc/default/docker
-  EOC
+cookbook_file "/etc/default/docker" do
+  mode 00644
   notifies :restart, 'service[docker]'
 end
 
