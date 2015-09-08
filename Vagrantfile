@@ -7,10 +7,10 @@ $vb_gui = false
 $vb_memory = 2048
 $vb_cpus = 1
 
-# GITLAB_CONFIG = File.join(File.dirname(__FILE__), "gitlab/config.rb")
-# if File.exist?(GITLAB_CONFIG)
-#   require GITLAB_CONFIG
-# end
+GITLAB_CONFIG = File.join(File.dirname(__FILE__), "gitlab/config.rb")
+if File.exist?(GITLAB_CONFIG)
+  require GITLAB_CONFIG
+end
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -52,10 +52,10 @@ Vagrant.configure(2) do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
 
   # ./gitlab/docker-compose.yml の gitlab-mysql: volumes: と合わせること
-  # config.vm.synced_folder "./gitlab/gitlab/mysql", "/vagrant/gitlab/gitlab/mysql",
-  #                         :create => true,
-  #                         :owner => "messagebus",
-  #                         :group => "messagebus"
+  config.vm.synced_folder "./gitlab/gitlab/mysql", "/vagrant/gitlab/gitlab/mysql",
+                          :create => true,
+                          :owner => "messagebus",
+                          :group => "messagebus"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -95,23 +95,16 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get install -y apache2
   # SHELL
 
-  # config.vm.provision "docker"
-  # config.vm.provision "shell", inline: <<-PREPARE
-  #   echo "Asia/Tokyo" | tee /etc/timezone
-  #   dpkg-reconfigure --frontend noninteractive tzdata
+  config.vm.provision "chef_zero" do |chef|
+    chef.cookbooks_path = "cookbooks"
+    chef.add_recipe "docker"
+  end
 
-  #   echo 'DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"' >> /etc/default/docker
-  #   restart docker
-  #   curl -sS -L https://github.com/docker/compose/releases/download/1.4.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-  
-  #   chmod +x /usr/local/bin/docker-compose
+  config.vm.provision "shell", inline: <<-PREPARE
+    echo "Asia/Tokyo" | tee /etc/timezone
+    dpkg-reconfigure --frontend noninteractive tzdata
 
-  #   docker-compose -p dproxy -f /vagrant/dproxy/docker-compose.yml up -d
-  #   docker-compose -p gitlab -f /vagrant/gitlab/docker-compose.yml up -d
-  # PREPARE
-
-  # config.vm.provision "chef_zero" do |chef|
-  #   chef.cookbooks_path = "./chef-repo/site-cookbooks"
-  #   chef.add_recipe "base_packages"
-  # end
+    docker-compose -p dproxy -f /vagrant/dproxy/docker-compose.yml up -d
+    docker-compose -p gitlab -f /vagrant/gitlab/docker-compose.yml up -d
+  PREPARE
 end
