@@ -1,11 +1,17 @@
 .bundle
 .ruby-version
 .vagrant
-dproxy/linked/src/github.com
-dproxy/linked/pkg
-gitlab/.env
-gitlab/gitlab
+*.key
+*.csr
+*.crt
+*.pem
 vendor/bundle/*
 
 clients
 nodes
+
+dproxy/linked/src/github.com
+dproxy/linked/pkg
+
+gitlab/.env
+gitlab/gitlab
