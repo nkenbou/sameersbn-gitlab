@@ -16,7 +16,6 @@ var (
 
 func httpPort(port int64) bool {
   return port == 80 ||
-    port == 443 ||
     port == 3000 ||
     port == 5000 ||
     port == 8000 ||
