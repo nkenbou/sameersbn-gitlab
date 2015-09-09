@@ -11,6 +11,7 @@ dproxy:
     - upstreams:redis
   ports:
     - "80:80"
+    - "443:443"
 
 linked:
   container_name: linked
