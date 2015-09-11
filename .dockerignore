@@ -1,0 +1,17 @@
+.git
+.gitignore
+README.md
+
+# Vagrant
+.env
+.vagrant
+
+# chef
+.chef
+clients
+nodes
+
+# Ruby
+.ruby-version
+.bundle
+vendor
