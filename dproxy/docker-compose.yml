@@ -12,6 +12,8 @@ dproxy:
   ports:
     - "80:80"
     - "443:443"
+  volumes:
+    - /vagrant/docker/dproxy/dproxy:/var/local/nginx
 
 linked:
   container_name: linked

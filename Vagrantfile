@@ -52,7 +52,7 @@ Vagrant.configure(2) do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
 
   # ./gitlab/docker-compose.yml の gitlab-mysql: volumes: と合わせること
-  config.vm.synced_folder "./gitlab/gitlab/mysql", "/vagrant/gitlab/gitlab/mysql",
+  config.vm.synced_folder "./docker/gitlab/mysql/data", "/vagrant/docker/gitlab/mysql/data",
                           :create => true,
                           :owner => "messagebus",
                           :group => "messagebus"
