@@ -1,11 +1,12 @@
 # Title
 ## Sub-title
+<!-- .slide: data-background="blue" -->
 
 Here is <span style="color: red">some</span> content...
 
-1. <p class="fragment">これが（[内部リンク](#/4/1)）</p>
-1. <p class="fragment">順に</p>
-1. <p class="fragment">表示</p>
+1. これが <!-- .element: class="fragment" data-fragment-index="1" -->
+2. 順に <!-- .element: class="fragment" data-fragment-index="2" -->
+3. 表示 <!-- .element: class="fragment" data-fragment-index="3" -->
 
 Note:
 This will only display in the notes window.
@@ -13,6 +14,7 @@ This will only display in the notes window.
 
 
 ## Sub-title2
+<!-- .slide: data-background="#ff0000" -->
 
 Here is some content...
 aaa
