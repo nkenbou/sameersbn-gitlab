@@ -83,3 +83,21 @@
 
 * GitLab
 * GitBucket
+
+
+
+## Git <!-- .element: style="color: red;" -->
+<!-- .slide: data-background="/sections/img/Git.png" -->
+
+
+## Git とは
+
+分散型バージョン管理システム
+
+最初の作者: Linus Torvalds
+
+
+## 集中型バージョン管理システム
+
+
+## 分散型バージョン管理システム
