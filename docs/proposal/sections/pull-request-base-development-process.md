@@ -46,13 +46,16 @@
 * Git
 
 
+
 ## GitHub <!-- .element: style="color: red;" -->
 <!-- .slide: data-background="/sections/img/GitHub.png" -->
 
 
 ## GitHub とは
 
-* 世界標準の開発環境
+* ソーシャルコーディング
+  * 世界中の誰もがソースコードを所有し、自在に変更し、公開する。
+* 世界標準の開発環境 (OSS の世界)
 
 
 ## 利用企業
