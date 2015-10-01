@@ -109,3 +109,5 @@
 
 
 ## 分散型バージョン管理システム
+
+![Git](/sections/img/distributed-version-control-system.svg) <!-- .element: style="width: 80%; height: 80%;" -->
