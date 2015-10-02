@@ -107,6 +107,8 @@
 
 ## 集中型バージョン管理システム
 
+![Git](/sections/img/centralized-version-control-systems.svg) <!-- .element: style="width: 80%; height: 80%;" -->
+
 
 ## 分散型バージョン管理システム
 
