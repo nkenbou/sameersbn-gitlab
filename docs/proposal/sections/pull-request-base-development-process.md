@@ -100,16 +100,31 @@
 
 ## Git とは
 
-分散型バージョン管理システム
+<span style="color: blue;">分散型</span>バージョン管理システム
 
 最初の作者: Linus Torvalds
 
 
-## 集中型バージョン管理システム
+## <span style="color: yellow;">集中型</span>？
+## <span style="color: blue;">分散型</span>？
+
+
+## <span style="color: yellow;">集中型</span>バージョン管理システム
 
 ![Git](/sections/img/centralized-version-control-systems.svg) <!-- .element: style="width: 80%; height: 80%;" -->
 
 
-## 分散型バージョン管理システム
+## <span style="color: blue;">分散型</span>バージョン管理システム
 
 ![Git](/sections/img/distributed-version-control-system.svg) <!-- .element: style="width: 80%; height: 80%;" -->
+
+
+## 分散型のメリット
+
+* オフラインでもコミット可能
+  * 出張の移動中など
+* 好きなタイミングでコミットできる
+  * ローカルリポジトリに対してコミットするので、他の開発メンバーに迷惑がかからない
+* 統合リポジトリには常に完成した機能だけが含まれる
+  * ブランチで開発を進めて、完成したら統合リポジトリにマージ
+  * 誰かに見せるときに常に動作する状態

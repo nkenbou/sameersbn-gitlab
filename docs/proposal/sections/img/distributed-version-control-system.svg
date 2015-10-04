@@ -149,7 +149,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer3"
-     inkscape:label="背景">
+     inkscape:label="背景"
+     sodipodi:insensitive="true">
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none"
        id="rect4170"
@@ -165,8 +166,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-308.26769)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <rect
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="rect3015"
