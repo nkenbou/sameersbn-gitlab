@@ -130,5 +130,6 @@
   * 誰かに見せるときに常に動作する状態
 
 
+<!-- .slide: data-background="/sections/img/google-trend-git-vs-svn.png" -->
 
 ## ご清聴ありがとうございました
