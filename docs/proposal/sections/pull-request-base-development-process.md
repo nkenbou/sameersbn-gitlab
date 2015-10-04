@@ -132,4 +132,26 @@
 
 <!-- .slide: data-background="/sections/img/google-trend-git-vs-svn.png" -->
 
+
+## 機能対応表
+
+ | TortoiseSVN | Git
+-|-----------|--------
+チェックアウト | SVN チェックアウト | clone
+更新 | SVN 更新 | pull
+コミット | SVNコミット | commit
+変更箇所の確認 | SVN 変更をチェック | status
+差分比較 | 差分を表示 | diff
+履歴照会 | ログを表示 | log
+取り消し | 変更の取り消し | checkout
+ロック | ロックを取得/解除 | <span style="color: red;">×</span>
+etc... | △ | <span style="color: red;">たくさん</span>
+
+
+## Git のその他の便利機能
+
+1つのファイル内の一部の変更のみコミット (git add -p)、直前のコミットをやり直す (git commit --amend)、直前のコミットをなかったことにする (git reset --hard HEAD^)、変更履歴のコミットグラフ表示 (git log --graph)、ファイルの1行1行がどのコミットで変更されたのかを表示 (git blame <path>)、複数の連続する履歴を1つの履歴にする (git rebase -i)、歴史を戻ってブランチを作成する (git reset --hard <オブジェクト名>、git checkout -b <ブランチ名>)、他のブランチの任意のコミットだけを取り込む (git cherry-pick <オブジェクト名>)、...
+
+
+
 ## ご清聴ありがとうございました
