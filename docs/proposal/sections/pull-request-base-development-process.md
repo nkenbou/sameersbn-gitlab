@@ -312,4 +312,23 @@ $ git branch -D <PRブランチ>
 
 
 
+## ブランチ戦略
+
+Git は自由度が高いので
+
+
+## ○○○○の場合、Git Flow をベースにすればよさそう
+
+詳しくは… <!-- .element: style="text-align: left; color: grey;" -->
+
+[A successful Git branching model を翻訳しました](http://keijinsonyaban.blogspot.jp/2010/10/successful-git-branching-model.html)
+
+
+<!-- .slide: data-background="/sections/img/GitFlow.png" data-background-size="38%" -->
+
+
+<!-- .slide: data-background="/sections/img/GitFlow-PIXS.svg" data-background-size="38%" -->
+
+
+
 ## ご清聴ありがとうございました
