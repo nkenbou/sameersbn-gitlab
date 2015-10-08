@@ -7,7 +7,7 @@
 * レビューのための準備作業 <!-- .element: class="fragment" data-fragment-index="1" -->
 * あいまいなレビュー範囲 <!-- .element: class="fragment" data-fragment-index="2" -->
   * レビュー対象の機能以外の影響による変更の混在 <!-- .element: class="fragment" data-fragment-index="2" -->
-* レビュー時期が遅くなるため <!-- .element: class="fragment" data-fragment-index="3" -->
+* レビュー時期が遅くなることによる弊害 <!-- .element: class="fragment" data-fragment-index="3" -->
   * 手戻りのコストが大きい <!-- .element: class="fragment" data-fragment-index="3" -->
   * 開発の終盤での指摘の場合、修正できないことも <!-- .element: class="fragment" data-fragment-index="3" -->
 * 会議のコスト <!-- .element: class="fragment" data-fragment-index="4" -->
@@ -15,7 +15,8 @@
   * 各自作業の中断 (スイッチングコスト) <!-- .element: class="fragment" data-fragment-index="4" -->
 
 
-## 現在のソースコードレビューのフロー
+### レビューのための準備作業
+### 現在のワークフロー
 
 1. 機能リーダーがレビュー機能を選定 <!-- .element: class="fragment" data-fragment-index="1" -->
 2. ソースコードの変更箇所を Excel へ記述 <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -311,6 +312,20 @@ $ git branch -D <PRブランチ>
 ### 10.3. マージ後の表示
 
 ![GitLab のマージ後の表示](/sections/img/hello-world/21.png)
+
+
+
+## 現在抱えているソースコードレビューの問題 〜 <span style="color: yellow;">解決編！</span>
+
+* レビューのための準備作業
+  * → GitLab でレビュー範囲を差分として見ることができる
+* あいまいなレビュー範囲
+  * → 機能単位でブランチを切るので差分も明確
+* レビュー時期が遅くなることによる弊害
+  * → WIP プルリクエストで実装着手と同時にレビュー (議論) が可能
+* 会議のコスト
+  * → 集合する必要がない (周知したい内容があればレビューとは別に)
+  * → レビュアーの都合のよいタイミングでレビュー
 
 
 
