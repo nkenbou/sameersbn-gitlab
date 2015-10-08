@@ -421,4 +421,12 @@ Git は自由度が高いので
 
 
 
+## おすすめ資料
+
+* こわくない Git: http://www.slideshare.net/kotas/git-15276118
+* GitHub実践入門: http://gihyo.jp/book/2014/978-4-7741-6366-6
+* A successful Git branching model: http://keijinsonyaban.blogspot.jp/2010/10/successful-git-branching-model.html
+
+
+
 ## ご清聴ありがとうございました
