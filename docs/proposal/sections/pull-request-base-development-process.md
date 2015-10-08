@@ -342,7 +342,7 @@ Git は自由度が高いので
 <tr><td>ブランチを切り替える</td><td>`git checkout <ブランチ名>`</td></tr>
 <tr><td>ブランチを作成し、切り替える</td><td>`git checkout -b <ブランチ名>`</td></tr>
 <tr><td>ブランチを削除する</td><td>`git branch -D <ブランチ名>`</td></tr>
-<tr><td>コミット対象に追加する</td><td>`git add <ファイル名>`</td></tr>
+<tr><td>変更のあった全てのファイルをコミット対象に追加する</td><td>`git add .`</td></tr>
 <tr><td>コミットする</td><td>`git commit`</td></tr>
 <tr><td>空コミットをする (WIP)</td><td>`git commit --allow-empty -m "wip"`</td></tr>
 <tr><td>リモートリポジトリに反映する</td><td>`git push`</td></tr>
@@ -351,6 +351,7 @@ Git は自由度が高いので
 <tr><td>リモートリポジトリから更新を取得して取り込む</td><td>`git pull`</td></tr>
 <tr><td>現在のブランチにマージする</td><td>`git merge <ブランチ名>`</td></tr>
 <tr><td>リモートブランチを取得し、ブランチを作成し、切り替える</td><td>`git checkout -b <ブランチ名> origin/<ブランチ名>`</td></tr>
+<!-- <tr><td></td><td></td></tr> -->
 </table>
 
 
