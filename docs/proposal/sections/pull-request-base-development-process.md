@@ -409,4 +409,16 @@ Git は自由度が高いので
 
 
 
+## Backlog
+
+* じょうれいくんで導入済み (ただし、チケット管理だけ)
+* Git、Subversion に両対応
+* エンジニア以外にもやさしい UI
+* アジャイル開発にも！ (バーンダウンチャート)
+
+
+<!-- .slide: data-background="/sections/img/Backlog.png" data-background-size="55%" -->
+
+
+
 ## ご清聴ありがとうございました
