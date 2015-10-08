@@ -355,5 +355,24 @@ Git は自由度が高いので
 </table>
 
 
+## その他、最低限の Git コマンド
+
+<table style="font-size: 60%;">
+<colgroup>
+  <col width="40%;">
+  <col width="60%;">
+</colgroup>
+
+<tr><td>ファイルをコミット対象に追加する</td><td>`git add <ファイル名>`</td></tr>
+<tr><td>ファイルの変更を取り消す</td><td>`git checkout HEAD <ファイル名>`</td></tr>
+<tr><td>ワークツリーで変更した差分を確認する</td><td>`git diff`</td></tr>
+<tr><td>ログを確認する</td><td>`git log`</td></tr>
+<tr><td>ログを要約のみで確認する</td><td>`git log --pretty=short`</td></tr>
+<tr><td>ログをグラフ表示で確認する</td><td>`git log --graph`</td></tr>
+<tr><td>ファイルの1行1行がどのコミットで変更されたか確認する</td><td>`git blame <ファイル名>`</td></tr>
+<tr><td>タグを作成する</td><td>`git tag <タグ名>`</td></tr>
+<!-- <tr><td></td><td></td></tr> -->
+</table>
+
 
 ## ご清聴ありがとうございました
