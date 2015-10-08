@@ -375,4 +375,13 @@ Git は自由度が高いので
 </table>
 
 
+## もちろん GUI もあるよ！
+
+* Git GUI ←Git 標準
+* SourceTree ←おすすめ
+* TortoiseSVN ←おなじみの UI
+* EGit ←Eclipse ユーザーなら
+
+
+
 ## ご清聴ありがとうございました
