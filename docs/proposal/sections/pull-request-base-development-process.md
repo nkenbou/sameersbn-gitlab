@@ -368,6 +368,10 @@ Git は自由度が高いので
 <!-- .slide: data-background="/sections/img/GitFlow-PIXS.svg" data-background-size="38%" -->
 
 
+## ブランチは運用次第で自由自在
+
+![パッケージ開発ブランチ戦略](/sections/img/customizing-branch.svg)
+
 
 ## 当スライドで登場した Git コマンド
 
