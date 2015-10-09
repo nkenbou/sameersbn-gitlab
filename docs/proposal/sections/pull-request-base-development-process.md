@@ -112,6 +112,13 @@
 ![Create Issue](/sections/img/gitlab-create-issue.png)
 
 
+## 外部ツール、サービスとの連携
+
+GitLab は Jenkins と連携できる
+
+他にもいろいろなツール、サービスと連携が可能らしい…
+
+
 
 ## Git <!-- .element: style="color: red;" -->
 <!-- .slide: data-background="/sections/img/Git.png" -->
