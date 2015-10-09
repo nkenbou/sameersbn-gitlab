@@ -94,6 +94,24 @@
 * GitBucket
 
 
+## Trac との違い
+
+* Trac = プロジェクト管理ツール
+* GitHub = ソフトウェア開発者を支援するためのツール
+
+品質の高いソフトウェアを高速で開発していくための後押しをするツール
+
+プロジェクト管理の機能はないが、
+## ソフトウェア開発を支援する機能は豊富
+
+
+## 例えば Issue の作成画面
+
+プロジェクトを管理するために必要な情報の入力はない
+
+![Create Issue](/sections/img/gitlab-create-issue.png)
+
+
 
 ## Git <!-- .element: style="color: red;" -->
 <!-- .slide: data-background="/sections/img/Git.png" -->
