@@ -115,6 +115,8 @@
 
 プロジェクトを管理するために必要な情報の入力はない
 
+開始日、終了日、工数、進捗率…
+
 ![Create Issue](/sections/img/gitlab-create-issue.png)
 
 ---
