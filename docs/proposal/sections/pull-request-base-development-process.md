@@ -1,23 +1,23 @@
-# プルリクエストベースの開発フロー
+# <span style="color: #75a9fc;">プルリクエスト</span>ベースの開発フロー
 
 --------------------------------------------------
 
-## 現在抱えているソースコードレビューの問題
+## 現在抱えている<span style="color: #ee719d;">ソースコードレビュー</span>の問題
 
 * レビューのための準備作業 <!-- .element: class="fragment" data-fragment-index="1" -->
 * あいまいなレビュー範囲 <!-- .element: class="fragment" data-fragment-index="2" -->
-  * レビュー対象の機能以外の影響による変更の混在 <!-- .element: class="fragment" data-fragment-index="2" -->
+  * レビュー対象の機能以外による変更の混在 <!-- .element: class="fragment" data-fragment-index="2" -->
 * レビュー時期が遅くなることによる弊害 <!-- .element: class="fragment" data-fragment-index="3" -->
   * 手戻りのコストが大きい <!-- .element: class="fragment" data-fragment-index="3" -->
   * 開発の終盤での指摘の場合、修正できないことも <!-- .element: class="fragment" data-fragment-index="3" -->
 * 会議のコスト <!-- .element: class="fragment" data-fragment-index="4" -->
   * 日程調整 <!-- .element: class="fragment" data-fragment-index="4" -->
-  * 各自作業の中断 (スイッチングコスト) <!-- .element: class="fragment" data-fragment-index="4" -->
+  * きりが悪い状態での作業の中断 (スイッチングコスト) <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 
 ## レビューのための準備作業
-## 現在のワークフロー
+## 現在のワークフロー <!-- .element: style="color: #fc8a81;" -->
 
 1. 機能リーダーがレビュー機能を選定 <!-- .element: class="fragment" data-fragment-index="1" -->
 2. ソースコードの変更箇所を Excel へ記述 <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -26,20 +26,20 @@
 
 --------------------------------------------------
 
-# そこで、
-# プルリクエストベースの開発フロー！
+# これらの問題を、
+# <span style="color: #75a9fc;">プルリクエスト</span>ベースの開発フローで解決
 
 --------------------------------------------------
 
 ## 改善する開発工程の範囲
 
-* ×: 要件定義
-* ×: 基本設計
+* ×: 要件定義 <!-- .element: style="text-align: left; color: #9FA0A0;" -->
+* ×: 基本設計 <!-- .element: style="text-align: left; color: #9FA0A0;" -->
 * △: 詳細設計
-* ○: 実装
-* ○: 単体テスト (自動テスト)
+* ○: 実装 <!-- .element: style="text-align: left; color: #ffd83b;" -->
+* ○: 単体テスト (自動テスト) <!-- .element: style="text-align: left; color: #ffd83b;" -->
 * △: 機能テスト
-* ×: システムテスト
+* ×: システムテスト <!-- .element: style="text-align: left; color: #9FA0A0;" -->
 
 --------------------------------------------------
 
@@ -54,14 +54,14 @@
 
 --------------------------------------------------
 
-# GitHub <!-- .element: style="color: red;" -->
+# GitHub <!-- .element: style="color: #fa3e83;" -->
 <!-- .slide: data-background="/sections/img/GitHub.png" -->
 
 ---
 
-## GitHub とは
+## <span style="color: #fa3e83;">GitHub</span> とは
 
-* ソーシャルコーディング
+* ソーシャルコーディングという概念を作り上げたサービス
   * 世界中の誰もがソースコードを所有し、自在に変更し、公開する。
 * 世界標準の開発環境 (OSS の世界)
 
@@ -91,28 +91,28 @@
 
 ---
 
-## GitHub クローン
-
-コンプライアンスや契約上、社外にソースコードや資料などを預けられない場合…
+## <span style="color: #fa3e83;">GitHub</span> クローン
 
 * GitLab
 * GitBucket
 
+コンプライアンスや契約上、ソースコードや資料などを社外に出せない場合に
+
 ---
 
-## Trac との違い
+## <span style="color: #ff8647;">Trac</span> との違い
 
-* Trac = プロジェクト管理ツール
-* GitHub = ソフトウェア開発者を支援するためのツール
+* <span style="color: #ff8647;">Trac</span> = プロジェクト管理ツール
+* <span style="color: #fa3e83;">GitHub</span> = ソフトウェア開発者を支援するためのツール
 
-品質の高いソフトウェアを高速で開発していくための後押しをするツール <!-- .element: class="fragment" -->
+<span class="fragment"><span style="color: #73a6fe;">品質の高い</span>ソフトウェアを<span style="color: #73a6fe;">高速で開発</span>していくための後押しをするツール</span>
 
 プロジェクト管理の機能はないが、 <!-- .element: class="fragment" -->
-# ソフトウェア開発を支援する機能は豊富 <!-- .element: class="fragment" -->
+# ソフトウェア開発を支援する機能は豊富！ <!-- .element: class="fragment" -->
 
 ---
 
-## 例えば Issue の作成画面
+## Issue の作成画面
 
 プロジェクトを管理するために必要な情報の入力はない
 
@@ -124,43 +124,43 @@
 
 ## 外部ツール、サービスとの連携
 
-GitLab は Jenkins と連携できる
+GitLab は Jenkins と連携可能
 
-他にもいろいろなツール、サービスと連携が可能らしい…
+他にもいろいろなツール、サービスと連携が可能
 
 --------------------------------------------------
 
-# Git <!-- .element: style="color: red;" -->
+# Git <!-- .element: style="color: #fa3e83;" -->
 <!-- .slide: data-background="/sections/img/Git.png" -->
 
 ---
 
-## Git とは
+## <span style="color: #fa3e83;">Git</span> とは
 
-<span style="color: blue;">分散型</span>バージョン管理システム
+<span style="color: #73a6fe;">分散型</span>バージョン管理システム
 
 最初の作者: Linus Torvalds
 
 ---
 
-# <span style="color: yellow;">集中型</span>？
-# <span style="color: blue;">分散型</span>？
+# <span style="color: #ffb93e;">集中型</span>？
+# <span style="color: #73a6fe;">分散型</span>？
 
 ---
 
-## <span style="color: yellow;">集中型</span>バージョン管理システム
+## <span style="color: #ffb93e;">集中型</span>バージョン管理システム
 
 ![Git](/sections/img/centralized-version-control-systems.svg) <!-- .element: style="width: 80%; height: 80%;" -->
 
 ---
 
-## <span style="color: blue;">分散型</span>バージョン管理システム
+## <span style="color: #73a6fe;">分散型</span>バージョン管理システム
 
 ![Git](/sections/img/distributed-version-control-system.svg) <!-- .element: style="width: 80%; height: 80%;" -->
 
 ---
 
-## 分散型のメリット (1)
+## <span style="color: #73a6fe;">分散型</span>のメリット (1)
 
 * ローカルリポジトリに対してコミットする <!-- .element: class="fragment" -->
   * 他の開発メンバーに迷惑がかからないので、好きなタイミングでコミットできる <!-- .element: class="fragment" -->
@@ -171,7 +171,7 @@ GitLab は Jenkins と連携できる
 
 ---
 
-## 分散型のメリット (2)
+## <span style="color: #73a6fe;">分散型</span>のメリット (2)
 
 * ブランチが切りやすい <!-- .element: class="fragment" -->
   * 目的ごとにブランチを切って平行作業が可能 <!-- .element: class="fragment" -->
@@ -191,7 +191,7 @@ GitLab は Jenkins と連携できる
 
 ## 機能比較
 
- | TortoiseSVN | Git
+ | <span style="color: #ff8647;">TortoiseSVN</span> | <span style="color: #73a6fe;">Git</span>
 -|-------------|-----
 チェックアウト | SVN チェックアウト | clone
 更新 | SVN 更新 | pull
@@ -200,18 +200,18 @@ GitLab は Jenkins と連携できる
 差分比較 | 差分を表示 | diff
 履歴照会 | ログを表示 | log
 取り消し | 変更の取り消し | checkout
-ロック | ロックを取得/解除 | <span style="color: red;">×</span>
-etc... | △ | <span style="color: red;">たくさん</span>
+ロック | ロックを取得/解除 | <span style="color: #fe6150;">×</span>
+etc... | △ | <span style="color: #fe6150">たくさん</span>
 
 ---
 
-## Git のその他の便利機能 (抜粋)
+## <span style="color: #73a6fe;">Git</span> のその他の便利機能 (抜粋)
 
 1つのファイル内の一部の変更のみコミット (git add -p)、直前のコミットをやり直す (git commit --amend)、直前のコミットをなかったことにする (git reset --hard HEAD^)、変更履歴のコミットグラフ表示 (git log --graph)、ファイルの1行1行がどのコミットで変更されたのかを表示 (git blame <path>)、複数の連続する履歴を1つの履歴にする (git rebase -i)、歴史を戻ってブランチを作成する (git reset --hard <オブジェクト名>、git checkout -b <ブランチ名>)、他のブランチの任意のコミットだけを取り込む (git cherry-pick <オブジェクト名>)、...
 
 --------------------------------------------------
 
-## プルリクエスト開発プロセス
+## <span style="color: #75a9fc;">プルリクエスト</span>開発プロセス
 
 1. ローカルリポジトリでブランチを作成する <!-- .element: class="fragment" -->
 2. 空コミットをしてリモートリポジトリに push する <!-- .element: class="fragment" -->
@@ -300,7 +300,7 @@ $ git push
 
 [WIP] を取り除き、@レビュアーで依頼を記入する
 
-WIP があるとマージできないように制御される
+※WIP があるとマージできないように制御される
 
 ![GitLab でレビュー依頼](/sections/img/hello-world/16.png)
 
@@ -388,7 +388,7 @@ $ git branch -D <PRブランチ>
 
 --------------------------------------------------
 
-## 現在抱えているソースコードレビューの問題 〜 <span style="color: yellow;">解決編！</span>
+## 現在抱えているソースコードレビューの問題 〜 <span style="color: #ffd83b;">解決編！</span>
 
 * レビューのための準備作業
   * → GitLab でレビュー範囲を差分として見ることができる <!-- .element: class="fragment" style="list-style-type: none;" -->
@@ -436,6 +436,8 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 ---
 
 ## ブランチは運用次第で自由自在
+
+顧客ごとのカスタマイズが必要なパッケージ開発
 
 ![パッケージ開発ブランチ戦略](/sections/img/customizing-branch.svg)
 
@@ -496,7 +498,7 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 
 --------------------------------------------------
 
-# GitHub の紹介
+# <span style="color: #fa3e83;">GitHub</span> の紹介
 
 ---
 
@@ -515,7 +517,7 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 
 ---
 
-## GitHub を勧める理由
+## <span style="color: #fa3e83;">GitHub</span> を勧める理由
 
 * 世界標準の開発環境
 * プライベートで利用している人が多いため教育コストの削減に
