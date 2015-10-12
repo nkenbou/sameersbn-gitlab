@@ -1,4 +1,4 @@
-# <span style="color: #73a6fe;">プルリクエスト</span>ベースの開発ワークフロー
+# <span style="color: #f34c27;">プルリクエスト</span>ベースの開発ワークフロー
 
 --------------------------------------------------
 
@@ -27,7 +27,7 @@
 --------------------------------------------------
 
 # これらの問題を、
-# <span style="color: #73a6fe;">プルリクエスト</span>ベースの開発ワークフローで
+# <span style="color: #f34c27;">プルリクエスト</span>ベースの開発ワークフローで
 # 解決
 
 --------------------------------------------------
@@ -55,12 +55,12 @@
 
 --------------------------------------------------
 
-# GitHub <!-- .element: style="color: #fa3e83;" -->
+# GitHub <!-- .element: style="color: #f34c27;" -->
 <!-- .slide: data-background="/sections/img/GitHub.png" -->
 
 ---
 
-## <span style="color: #fa3e83;">GitHub</span> とは
+## <span style="color: #f34c27;">GitHub</span> とは
 
 * ソーシャルコーディングという概念を作り上げたサービス
   * 世界中の誰もがソースコードを所有し、自在に変更し、公開する。
@@ -92,7 +92,7 @@
 
 ---
 
-## <span style="color: #fa3e83;">GitHub</span> クローン
+## <span style="color: #f34c27;">GitHub</span> クローン
 
 * GitLab
 * GitBucket
@@ -101,12 +101,12 @@
 
 ---
 
-## <span style="color: #ffb93e;">Trac</span> との違い
+## <span style="color: #98b0d6;">Trac</span> との違い
 
-* <span style="color: #ffb93e;">Trac</span> = プロジェクト管理ツール
-* <span style="color: #fa3e83;">GitHub</span> = ソフトウェア開発者を支援するためのツール
+* <span style="color: #98b0d6;">Trac</span> = プロジェクト管理ツール
+* <span style="color: #f34c27;">GitHub</span> = ソフトウェア開発者を支援するためのツール
 
-<span class="fragment"><span style="color: #73a6fe;">品質の高い</span>ソフトウェアを<span style="color: #73a6fe;">高速で開発</span>していくための後押しをするツール</span>
+<span class="fragment"><span style="color: #ffd83b;">品質の高い</span>ソフトウェアを<span style="color: #ffd83b;">高速で開発</span>していくための後押しをするツール</span>
 
 プロジェクト管理の機能はないが、 <!-- .element: class="fragment" -->
 # ソフトウェア開発を支援する機能は豊富！ <!-- .element: class="fragment" -->
@@ -131,37 +131,37 @@ GitLab は Jenkins と連携可能
 
 --------------------------------------------------
 
-# Git <!-- .element: style="color: #fa3e83;" -->
+# Git <!-- .element: style="color: #f34c27;" -->
 <!-- .slide: data-background="/sections/img/Git.png" -->
 
 ---
 
-## <span style="color: #fa3e83;">Git</span> とは
+## <span style="color: #f34c27;">Git</span> とは
 
-<span style="color: #fa3e83;">分散型</span>バージョン管理システム
+<span style="color: #f34c27;">分散型</span>バージョン管理システム
 
 最初の作者: Linus Torvalds
 
 ---
 
-# <span style="color: #ffb93e;">集中型</span>？
-# <span style="color: #fa3e83;">分散型</span>？
+# <span style="color: #98b0d6;">集中型</span>？
+# <span style="color: #f34c27;">分散型</span>？
 
 ---
 
-## <span style="color: #ffb93e;">集中型</span>バージョン管理システム
+## <span style="color: #98b0d6;">集中型</span>バージョン管理システム
 
 ![Git](/sections/img/centralized-version-control-systems.svg) <!-- .element: style="width: 80%; height: 80%;" -->
 
 ---
 
-## <span style="color: #fa3e83;">分散型</span>バージョン管理システム
+## <span style="color: #f34c27;">分散型</span>バージョン管理システム
 
 ![Git](/sections/img/distributed-version-control-system.svg) <!-- .element: style="width: 80%; height: 80%;" -->
 
 ---
 
-## <span style="color: #fa3e83;">分散型</span>のメリット (1)
+## <span style="color: #f34c27;">分散型</span>のメリット (1)
 
 * ローカルリポジトリに対してコミットする <!-- .element: class="fragment" -->
   * 他の開発メンバーに迷惑がかからないので、好きなタイミングでコミットできる <!-- .element: class="fragment" -->
@@ -172,7 +172,7 @@ GitLab は Jenkins と連携可能
 
 ---
 
-## <span style="color: #fa3e83;">分散型</span>のメリット (2)
+## <span style="color: #f34c27;">分散型</span>のメリット (2)
 
 * ブランチが切りやすい <!-- .element: class="fragment" -->
   * 目的ごとにブランチを切って平行作業が可能 <!-- .element: class="fragment" -->
@@ -192,7 +192,7 @@ GitLab は Jenkins と連携可能
 
 ## 機能比較
 
- | <span style="color: #ffb93e;">TortoiseSVN</span> | <span style="color: #fa3e83;">Git</span>
+ | <span style="color: #98b0d6;">TortoiseSVN</span> | <span style="color: #f34c27;">Git</span>
 -|-------------|-----
 チェックアウト | SVN チェックアウト | clone
 更新 | SVN 更新 | pull
@@ -206,13 +206,13 @@ etc... | △ | <span style="color: #ffd83b;">たくさん</span>
 
 ---
 
-## <span style="color: #fa3e83;">Git</span> のその他の便利機能 (抜粋)
+## <span style="color: #f34c27;">Git</span> のその他の便利機能 (抜粋)
 
 1つのファイル内の一部の変更のみコミット (git add -p)、直前のコミットをやり直す (git commit --amend)、直前のコミットをなかったことにする (git reset --hard HEAD^)、変更履歴のコミットグラフ表示 (git log --graph)、ファイルの1行1行がどのコミットで変更されたのかを表示 (git blame <path>)、複数の連続する履歴を1つの履歴にする (git rebase -i)、歴史を戻ってブランチを作成する (git reset --hard <オブジェクト名>、git checkout -b <ブランチ名>)、他のブランチの任意のコミットだけを取り込む (git cherry-pick <オブジェクト名>)、...
 
 --------------------------------------------------
 
-## <span style="color: #73a6fe;">プルリクエスト</span>開発プロセス
+## <span style="color: #f34c27;">プルリクエスト</span>開発プロセス
 
 1. ローカルリポジトリでブランチを作成する <!-- .element: class="fragment" -->
 2. 空コミットをしてリモートリポジトリに push する <!-- .element: class="fragment" -->
@@ -323,7 +323,7 @@ $ git push
 
 ![GitLab での差分](/sections/img/hello-world/18.png)
 
-<span style="font-size: 90%;"><span style="color: #73a6fe;">ブランチ単位で差分が確認できる</span>ので修正箇所が明確になる</span>
+<span style="font-size: 90%;"><span style="color: #ffd83b;">ブランチ単位で差分が確認できる</span>ので修正箇所が明確になる</span>
 
 ---
 
@@ -331,7 +331,7 @@ $ git push
 
 ![GitLab でのレビューコメント](/sections/img/hello-world/19.png)
 
-<span style="color: #73a6fe;">行単位でコメントできる (スレッド)</span>
+<span style="color: #ffd83b;">行単位でコメントできる (スレッド)</span>
 
 ---
 
@@ -420,7 +420,7 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 
 ---
 
-## ○○○○の場合、<span style="color: #fa3e83;">Git Flow</span> をベースにすればよさそう
+## ○○○○の場合、<span style="color: #f34c27;">Git Flow</span> をベースにすればよさそう
 
 詳しくは… <!-- .element: style="text-align: left; color: #9FA0A0;" -->
 
@@ -499,11 +499,11 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 
 --------------------------------------------------
 
-# <span style="color: #fa3e83;">GitHub</span> の紹介
+# <span style="color: #f34c27;">GitHub</span> の紹介
 
 ---
 
-## <span style="color: #fa3e83;">GitHub</span> を勧める理由
+## <span style="color: #f34c27;">GitHub</span> を勧める理由
 
 * 世界標準の開発環境
 * プライベートで利用している人が多いため教育コストの削減に
@@ -529,7 +529,7 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 ## Backlog <!-- .element: style="color: #49a62e;" -->
 
 * じょうれいくんで導入済み (ただし、チケット管理だけ)
-* <span style="color: #fa3e83;">Git</span>、<span style="color: #ffb93e;">Subversion</span> に両対応
+* <span style="color: #f34c27;">Git</span>、<span style="color: #98b0d6;">Subversion</span> に両対応
 * エンジニア以外にもやさしい UI
 * アジャイル開発にも！ (バーンダウンチャート)
 
