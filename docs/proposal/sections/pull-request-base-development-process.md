@@ -1,23 +1,23 @@
-# <span style="color: #75a9fc;">プルリクエスト</span>ベースの開発フロー
+# <span style="color: #75a9fc;">プルリクエスト</span>ベースの開発ワークフロー
 
 --------------------------------------------------
 
 ## 現在抱えている<span style="color: #ee719d;">ソースコードレビュー</span>の問題
 
-* レビューのための準備作業 <!-- .element: class="fragment" data-fragment-index="1" -->
-* あいまいなレビュー範囲 <!-- .element: class="fragment" data-fragment-index="2" -->
-  * レビュー対象の機能以外による変更の混在 <!-- .element: class="fragment" data-fragment-index="2" -->
-* レビュー時期が遅くなることによる弊害 <!-- .element: class="fragment" data-fragment-index="3" -->
-  * 手戻りのコストが大きい <!-- .element: class="fragment" data-fragment-index="3" -->
-  * 開発の終盤での指摘の場合、修正できないことも <!-- .element: class="fragment" data-fragment-index="3" -->
-* 会議のコスト <!-- .element: class="fragment" data-fragment-index="4" -->
-  * 日程調整 <!-- .element: class="fragment" data-fragment-index="4" -->
-  * きりが悪い状態での作業の中断 (スイッチングコスト) <!-- .element: class="fragment" data-fragment-index="4" -->
+* レビューのための準備作業 <!-- .element: class="fragment" -->
+* あいまいなレビュー範囲 <!-- .element: class="fragment" -->
+  * レビュー対象の機能以外による変更の混在 <!-- .element: class="fragment" -->
+* レビュー時期が遅くなることによる弊害 <!-- .element: class="fragment" -->
+  * 手戻りのコストが大きい <!-- .element: class="fragment" -->
+  * 開発の終盤での指摘の場合、修正できないことも <!-- .element: class="fragment" -->
+* 会議のコスト <!-- .element: class="fragment" -->
+  * 日程調整 <!-- .element: class="fragment" -->
+  * きりが悪い状態での作業の中断 (スイッチングコスト) <!-- .element: class="fragment" -->
 
 ---
 
 ## レビューのための準備作業
-## 現在のワークフロー <!-- .element: style="color: #fc8a81;" -->
+## 現在のワークフロー <!-- .element: style="color: #ff8647;" -->
 
 1. 機能リーダーがレビュー機能を選定 <!-- .element: class="fragment" data-fragment-index="1" -->
 2. ソースコードの変更箇所を Excel へ記述 <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -27,7 +27,8 @@
 --------------------------------------------------
 
 # これらの問題を、
-# <span style="color: #75a9fc;">プルリクエスト</span>ベースの開発フローで解決
+# <span style="color: #75a9fc;">プルリクエスト</span>ベースの開発ワークフローで
+# 解決
 
 --------------------------------------------------
 
@@ -100,9 +101,9 @@
 
 ---
 
-## <span style="color: #ff8647;">Trac</span> との違い
+## <span style="color: #ffb93e;">Trac</span> との違い
 
-* <span style="color: #ff8647;">Trac</span> = プロジェクト管理ツール
+* <span style="color: #ffb93e;">Trac</span> = プロジェクト管理ツール
 * <span style="color: #fa3e83;">GitHub</span> = ソフトウェア開発者を支援するためのツール
 
 <span class="fragment"><span style="color: #73a6fe;">品質の高い</span>ソフトウェアを<span style="color: #73a6fe;">高速で開発</span>していくための後押しをするツール</span>
@@ -191,7 +192,7 @@ GitLab は Jenkins と連携可能
 
 ## 機能比較
 
- | <span style="color: #ff8647;">TortoiseSVN</span> | <span style="color: #73a6fe;">Git</span>
+ | <span style="color: #ffb93e;">TortoiseSVN</span> | <span style="color: #73a6fe;">Git</span>
 -|-------------|-----
 チェックアウト | SVN チェックアウト | clone
 更新 | SVN 更新 | pull
@@ -205,7 +206,7 @@ etc... | △ | <span style="color: #fe6150">たくさん</span>
 
 ---
 
-## <span style="color: #73a6fe;">Git</span> のその他の便利機能 (抜粋)
+## <span style="color: #fa3e83;">Git</span> のその他の便利機能 (抜粋)
 
 1つのファイル内の一部の変更のみコミット (git add -p)、直前のコミットをやり直す (git commit --amend)、直前のコミットをなかったことにする (git reset --hard HEAD^)、変更履歴のコミットグラフ表示 (git log --graph)、ファイルの1行1行がどのコミットで変更されたのかを表示 (git blame <path>)、複数の連続する履歴を1つの履歴にする (git rebase -i)、歴史を戻ってブランチを作成する (git reset --hard <オブジェクト名>、git checkout -b <ブランチ名>)、他のブランチの任意のコミットだけを取り込む (git cherry-pick <オブジェクト名>)、...
 
@@ -276,7 +277,7 @@ $ git commit
 $ git push
 ```
 
-### push のタイミング
+### push のタイミング <!-- .element: style="color: #ffd83b;" -->
 
 * 1つのブランチを共同で実装しているときは頻繁に
 * 途中でも誰かにレビューしてもらいたいとき
@@ -322,7 +323,7 @@ $ git push
 
 ![GitLab での差分](/sections/img/hello-world/18.png)
 
-ブランチ単位で差分が確認できるので修正箇所が明確になる <!-- .element: style="font-size: 90%;" -->
+<span style="font-size: 90%;"><span style="color: #ffd83b;">ブランチ単位で差分が確認できる</span>ので修正箇所が明確になる</span>
 
 ---
 
@@ -330,7 +331,7 @@ $ git push
 
 ![GitLab でのレビューコメント](/sections/img/hello-world/19.png)
 
-行単位でコメントできる (スレッド)
+<span style="color: #ffd83b;">行単位でコメントできる (スレッド)</span>
 
 ---
 
@@ -406,7 +407,7 @@ $ git branch -D <PRブランチ>
 
 Git は自由度が高いので運用を考えたブランチ戦略が重要
 
-確実にブランチ戦略に従って運用していく
+確実にブランチ戦略に従って運用する
 
 ---
 
@@ -419,7 +420,7 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 
 ---
 
-## ○○○○の場合、Git Flow をベースにすればよさそう
+## ○○○○の場合、<span style="color: #fa3e83;">Git Flow</span> をベースにすればよさそう
 
 詳しくは… <!-- .element: style="text-align: left; color: grey;" -->
 
@@ -437,7 +438,7 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 
 ## ブランチは運用次第で自由自在
 
-顧客ごとのカスタマイズが必要なパッケージ開発
+例. 顧客ごとのカスタマイズが必要なパッケージ開発
 
 ![パッケージ開発ブランチ戦略](/sections/img/customizing-branch.svg)
 
@@ -502,6 +503,14 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 
 ---
 
+## <span style="color: #fa3e83;">GitHub</span> を勧める理由
+
+* 世界標準の開発環境
+* プライベートで利用している人が多いため教育コストの削減に
+* リポジトリサーバーのメンテナンスが不要
+
+---
+
 ## プラン
 
 * Organization plans
@@ -515,17 +524,9 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
   * アップデートが簡単
   * テクニカルサポートあり
 
----
-
-## <span style="color: #fa3e83;">GitHub</span> を勧める理由
-
-* 世界標準の開発環境
-* プライベートで利用している人が多いため教育コストの削減に
-* リポジトリサーバーのメンテナンスが不要
-
 --------------------------------------------------
 
-## Backlog
+## Backlog <!-- .element: style="color: #ffb93e;" -->
 
 * じょうれいくんで導入済み (ただし、チケット管理だけ)
 * Git、Subversion に両対応
