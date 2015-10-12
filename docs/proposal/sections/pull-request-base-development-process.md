@@ -113,7 +113,7 @@
 
 ---
 
-## Issue の作成画面
+## <span style="color: #ffd83b;">Issue</span> の作成画面
 
 プロジェクトを管理するために必要な情報の入力はない
 
@@ -125,7 +125,7 @@
 
 ## 外部ツール、サービスとの連携
 
-GitLab は Jenkins と連携可能
+<span style="color: #f34c27;">GitLab</span> は <span style="color: #ffd83b;">Jenkins</span> と連携可能
 
 他にもいろいろなツール、サービスと連携が可能
 
@@ -246,13 +246,13 @@ $ git push origin change-output-text
 
 ---
 
-## 2.1. GitLab 側にもブランチが自動的にできる
+## 2.1. <span style="color: #f34c27;">GitLab</span> 側にもブランチが自動的にできる
 
 ![GitLab のブランチ](/sections/img/hello-world/13.png)
 
 ---
 
-## 3.WIP プルリクエストを作成する
+## 3.<span style="color: #c5de00;">WIP プルリクエスト</span>を作成する
 
 WIP = Work in Progress (進行中の作業)
 
@@ -313,7 +313,7 @@ $ git push
 
 ---
 
-## 8. レビューを実施し、GitLab で指摘事項などを記入する
+## 8. レビューを実施し、<span style="color: #f34c27;">GitLab</span> で指摘事項などを記入する
 
 ---
 
@@ -333,7 +333,8 @@ $ git push
 
 ---
 
-## 8.3. テスト、動作確認のしかた (レビュアー)
+## 8.3. テスト、動作確認のしかた
+## (レビュアー)
 
 #### 1. リモートリポジトリからブランチを取得する <!-- .element: style="text-align: left;" -->
 
@@ -363,7 +364,7 @@ $ git merge <PRブランチ>
 $ git push
 ```
 
-GitLab のプルリクエストは自動的に Open → Merged に変わる
+<span style="color: #f34c27;">GitLab</span> の<span style="color: #c5de00;">プルリクエスト</span>は自動的に Open → Merged に変わる
 
 ※レビューに使った一時的なブランチを削除するには
 
@@ -373,7 +374,7 @@ $ git branch -D <PRブランチ>
 
 ---
 
-## 10.2. GitLab からのマージ方法
+## 10.2. <span style="color: #f34c27;">GitLab</span> からのマージ方法
 
 "Accept Merge Request" ボタンをクリック
 
@@ -403,7 +404,7 @@ $ git branch -D <PRブランチ>
 
 ## ブランチ戦略
 
-Git は自由度が高いので運用を考えたブランチ戦略が重要
+<span style="color: #f34c27;">Git</span> は自由度が高いので運用を考えたブランチ戦略が重要
 
 確実にブランチ戦略に従って運用する
 
@@ -442,7 +443,7 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 
 --------------------------------------------------
 
-## 当スライドで登場した Git コマンド
+## 当スライドで登場した <span style="color: #f34c27;">Git</span> コマンド
 
 <table style="font-size: 60%;">
 <colgroup>
@@ -467,7 +468,7 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 
 ---
 
-## その他、最低限の Git コマンド
+## その他、最低限の <span style="color: #f34c27;">Git</span> コマンド
 
 <table style="font-size: 60%;">
 <colgroup>
@@ -488,7 +489,7 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 
 ---
 
-## もちろん GUI もあるよ！
+## もちろん <span style="color: #ffd83b;">GUI</span> もあるよ！
 
 * Git GUI ←Git 標準
 * SourceTree ←おすすめ
