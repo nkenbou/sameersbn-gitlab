@@ -1,8 +1,8 @@
-# <span style="color: #75a9fc;">プルリクエスト</span>ベースの開発ワークフロー
+# <span style="color: #73a6fe;">プルリクエスト</span>ベースの開発ワークフロー
 
 --------------------------------------------------
 
-## 現在抱えている<span style="color: #ee719d;">ソースコードレビュー</span>の問題
+## 現在抱えている<span style="color: #ffd83b;">ソースコードレビュー</span>の問題
 
 * レビューのための準備作業 <!-- .element: class="fragment" -->
 * あいまいなレビュー範囲 <!-- .element: class="fragment" -->
@@ -17,7 +17,7 @@
 ---
 
 ## レビューのための準備作業
-## 現在のワークフロー <!-- .element: style="color: #ff8647;" -->
+## 現在のワークフロー <!-- .element: style="color: #ffd83b;" -->
 
 1. 機能リーダーがレビュー機能を選定 <!-- .element: class="fragment" data-fragment-index="1" -->
 2. ソースコードの変更箇所を Excel へ記述 <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -27,7 +27,7 @@
 --------------------------------------------------
 
 # これらの問題を、
-# <span style="color: #75a9fc;">プルリクエスト</span>ベースの開発ワークフローで
+# <span style="color: #73a6fe;">プルリクエスト</span>ベースの開発ワークフローで
 # 解決
 
 --------------------------------------------------
@@ -138,14 +138,14 @@ GitLab は Jenkins と連携可能
 
 ## <span style="color: #fa3e83;">Git</span> とは
 
-<span style="color: #73a6fe;">分散型</span>バージョン管理システム
+<span style="color: #fa3e83;">分散型</span>バージョン管理システム
 
 最初の作者: Linus Torvalds
 
 ---
 
 # <span style="color: #ffb93e;">集中型</span>？
-# <span style="color: #73a6fe;">分散型</span>？
+# <span style="color: #fa3e83;">分散型</span>？
 
 ---
 
@@ -155,13 +155,13 @@ GitLab は Jenkins と連携可能
 
 ---
 
-## <span style="color: #73a6fe;">分散型</span>バージョン管理システム
+## <span style="color: #fa3e83;">分散型</span>バージョン管理システム
 
 ![Git](/sections/img/distributed-version-control-system.svg) <!-- .element: style="width: 80%; height: 80%;" -->
 
 ---
 
-## <span style="color: #73a6fe;">分散型</span>のメリット (1)
+## <span style="color: #fa3e83;">分散型</span>のメリット (1)
 
 * ローカルリポジトリに対してコミットする <!-- .element: class="fragment" -->
   * 他の開発メンバーに迷惑がかからないので、好きなタイミングでコミットできる <!-- .element: class="fragment" -->
@@ -172,7 +172,7 @@ GitLab は Jenkins と連携可能
 
 ---
 
-## <span style="color: #73a6fe;">分散型</span>のメリット (2)
+## <span style="color: #fa3e83;">分散型</span>のメリット (2)
 
 * ブランチが切りやすい <!-- .element: class="fragment" -->
   * 目的ごとにブランチを切って平行作業が可能 <!-- .element: class="fragment" -->
@@ -192,7 +192,7 @@ GitLab は Jenkins と連携可能
 
 ## 機能比較
 
- | <span style="color: #ffb93e;">TortoiseSVN</span> | <span style="color: #73a6fe;">Git</span>
+ | <span style="color: #ffb93e;">TortoiseSVN</span> | <span style="color: #fa3e83;">Git</span>
 -|-------------|-----
 チェックアウト | SVN チェックアウト | clone
 更新 | SVN 更新 | pull
@@ -201,8 +201,8 @@ GitLab は Jenkins と連携可能
 差分比較 | 差分を表示 | diff
 履歴照会 | ログを表示 | log
 取り消し | 変更の取り消し | checkout
-ロック | ロックを取得/解除 | <span style="color: #fe6150;">×</span>
-etc... | △ | <span style="color: #fe6150">たくさん</span>
+ロック | ロックを取得/解除 | <span style="color: #ffd83b;">×</span>
+etc... | △ | <span style="color: #ffd83b;">たくさん</span>
 
 ---
 
@@ -212,7 +212,7 @@ etc... | △ | <span style="color: #fe6150">たくさん</span>
 
 --------------------------------------------------
 
-## <span style="color: #75a9fc;">プルリクエスト</span>開発プロセス
+## <span style="color: #73a6fe;">プルリクエスト</span>開発プロセス
 
 1. ローカルリポジトリでブランチを作成する <!-- .element: class="fragment" -->
 2. 空コミットをしてリモートリポジトリに push する <!-- .element: class="fragment" -->
@@ -323,7 +323,7 @@ $ git push
 
 ![GitLab での差分](/sections/img/hello-world/18.png)
 
-<span style="font-size: 90%;"><span style="color: #ffd83b;">ブランチ単位で差分が確認できる</span>ので修正箇所が明確になる</span>
+<span style="font-size: 90%;"><span style="color: #73a6fe;">ブランチ単位で差分が確認できる</span>ので修正箇所が明確になる</span>
 
 ---
 
@@ -331,7 +331,7 @@ $ git push
 
 ![GitLab でのレビューコメント](/sections/img/hello-world/19.png)
 
-<span style="color: #ffd83b;">行単位でコメントできる (スレッド)</span>
+<span style="color: #73a6fe;">行単位でコメントできる (スレッド)</span>
 
 ---
 
@@ -422,7 +422,7 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 
 ## ○○○○の場合、<span style="color: #fa3e83;">Git Flow</span> をベースにすればよさそう
 
-詳しくは… <!-- .element: style="text-align: left; color: grey;" -->
+詳しくは… <!-- .element: style="text-align: left; color: #9FA0A0;" -->
 
 [A successful Git branching model を翻訳しました](http://keijinsonyaban.blogspot.jp/2010/10/successful-git-branching-model.html)
 
@@ -526,10 +526,10 @@ Git は自由度が高いので運用を考えたブランチ戦略が重要
 
 --------------------------------------------------
 
-## Backlog <!-- .element: style="color: #ffb93e;" -->
+## Backlog <!-- .element: style="color: #49a62e;" -->
 
 * じょうれいくんで導入済み (ただし、チケット管理だけ)
-* Git、Subversion に両対応
+* <span style="color: #fa3e83;">Git</span>、<span style="color: #ffb93e;">Subversion</span> に両対応
 * エンジニア以外にもやさしい UI
 * アジャイル開発にも！ (バーンダウンチャート)
 
