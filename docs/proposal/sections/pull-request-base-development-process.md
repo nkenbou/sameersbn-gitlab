@@ -113,7 +113,7 @@
 
 ---
 
-## <span style="color: #ffd83b;">Issue</span> の作成画面
+## Issue の作成画面
 
 プロジェクトを管理するために必要な情報の入力はない
 
@@ -123,11 +123,31 @@
 
 ---
 
-## 外部ツール、サービスとの連携
+## <span style="color: #f34c27;">GitLab</span> の機能 (1)
 
-<span style="color: #f34c27;">GitLab</span> は <span style="color: #ffd83b;">Jenkins</span> と連携可能
+* <span style="color: #c5de00;">マージリクエスト</span> (=<span style="color: #c5de00;">プルリクエスト</span>)
+* <span style="color: #c5de00;">マージリクエスト</span>の中に<span style="color: #ffd83b;">コミュニケーションを集約・一本化</span>
+  * レビュー、議論、質疑応答など
+* <span style="color: #c5de00;">マージリクエスト</span> (ブランチ) 単位でのソースコードの差分
+* ソースコードの行に対してコメント可能
+* コメント記述時に任意の相手への通知
+* 行ごとの最新コミット表示
+* 豊富なコメント機能 (引用、絵文字、通知)
+* マーカーでの引用
+* GitHub Flavored Markdown (Issue、Wiki、コメント、etc...)
 
-他にもいろいろなツール、サービスと連携が可能
+---
+
+## <span style="color: #f34c27;">GitLab</span> の機能 (2)
+
+* コミットと Issue、<span style="color: #c5de00;">マージリクエスト</span>との関連付け
+* コミットからの Issue、<span style="color: #c5de00;">マージリクエスト</span>の操作
+* Issue のステータス管理
+* マイルストーン
+* Wiki
+* コードスニペット
+* キーボード・ショートカット
+* 外部ツール、サービスとの連携 (<span style="color: #ffd83b;">Jenkins</span> など)
 
 --------------------------------------------------
 
