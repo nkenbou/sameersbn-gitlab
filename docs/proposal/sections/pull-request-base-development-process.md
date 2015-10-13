@@ -19,7 +19,7 @@
 ## レビューのための準備作業
 ## 現在のワークフロー <!-- .element: style="color: #ffd83b;" -->
 
-1. 機能リーダーがレビュー機能を選定 <!-- .element: class="fragment" data-fragment-index="1" -->
+1. リーダーがレビュー機能を選定 <!-- .element: class="fragment" data-fragment-index="1" -->
 2. ソースコードの変更箇所を Excel へ記述 <!-- .element: class="fragment" data-fragment-index="2" -->
 3. レビュー参加者が他メンバーの変更箇所をチェック <!-- .element: class="fragment" data-fragment-index="3" -->
 4. レビュー会議でチェックした箇所の報告および議論 <!-- .element: class="fragment" data-fragment-index="4" -->
