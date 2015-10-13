@@ -420,6 +420,18 @@ $ git branch -D <PRブランチ>
   * → 集合する必要がない (周知したい内容があればレビューとは別に) <!-- .element: class="fragment" style="list-style-type: none;" -->
   * → レビュアーの都合のよいタイミングでレビュー <!-- .element: class="fragment" style="list-style-type: none;" -->
 
+---
+
+## <span style="color: #c5de00;">プルリクエスト</span>が重要な理由
+
+### <span class="fragment">それぞれのブランチがどんな状態にあるのか<span style="color: #ffd83b;">見える化</span>するのが<span style="color: #c5de00;">プルリクエスト</span></span>
+
+### <span class="fragment">開発プロジェクトでは「<span style="color: #ff2c2d;">誰が何を開発すべきか</span>」をタスク管理ツールで<span style="color: #ffd83b;">見える化</span>することが重要</span>
+
+### <span class="fragment">同様に<span style="color: #c5de00;">プルリクエスト</span>は「<span style="color: #ff2c2d;">誰がどんな開発をしていて、それがどう取り込まれたか</span>」をソースコードレベルで<span style="color: #ffd83b;">見える化</span>する</span>
+
+
+
 --------------------------------------------------
 
 ## ブランチ戦略
