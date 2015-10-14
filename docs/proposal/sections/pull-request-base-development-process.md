@@ -19,10 +19,11 @@
 ## レビューのための準備作業
 ## 現在のワークフロー <!-- .element: style="color: #ffd83b;" -->
 
-1. リーダーがレビュー機能を選定 <!-- .element: class="fragment" data-fragment-index="1" -->
-2. ソースコードの変更箇所を Excel へ記述 <!-- .element: class="fragment" data-fragment-index="2" -->
-3. レビュー参加者が他メンバーの変更箇所をチェック <!-- .element: class="fragment" data-fragment-index="3" -->
-4. レビュー会議でチェックした箇所の報告および議論 <!-- .element: class="fragment" data-fragment-index="4" -->
+1. リーダーがレビュー機能を選定 <!-- .element: class="fragment" -->
+2. ソースコードの変更箇所を Excel へ記述 <!-- .element: class="fragment" -->
+3. レビュー参加者の選定  <!-- .element: class="fragment" -->
+4. レビュー参加者が他メンバーの変更箇所をチェック <!-- .element: class="fragment" -->
+5. レビュー会議でチェックした箇所の報告および議論 <!-- .element: class="fragment" -->
 
 --------------------------------------------------
 
@@ -50,7 +51,7 @@
 
 ## 使うものを紹介
 
-* GitHub (GitHub クローン)
+* GitHub (クローン)
 * Git
 
 --------------------------------------------------
@@ -63,7 +64,7 @@
 ## <span style="color: #f34c27;">GitHub</span> とは
 
 * ソーシャルコーディングという概念を作り上げたサービス
-  * 世界中の誰もがソースコードを所有し、自在に変更し、公開する。
+  * 世界中の誰もがソースコードを所有し、自在に変更し、公開する
 * <span style="color: #ffd83b;">世界標準</span>の開発環境 (OSS の世界)
 
 ---
@@ -94,7 +95,7 @@
 
 ## <span style="color: #f34c27;">GitHub</span> クローン
 
-* GitLab
+* <span class="fragment grow highlight-red" data-fragment-index="0">GitLab</span> <span class="fragment" data-fragment-index="0">← 当スライドではこちらで説明</span>
 * GitBucket
 
 コンプライアンスや契約上、ソースコードや資料などを社外に出せない場合に自社サーバーで運用する
@@ -185,7 +186,7 @@
 
 * ローカルリポジトリに対してコミットする <!-- .element: class="fragment" -->
   * 他の開発メンバーに迷惑がかからないので、好きなタイミングでコミットできる <!-- .element: class="fragment" -->
-  * 壊れている状態でコミットしても OK  <!-- .element: class="fragment" -->
+  * 壊れている状態でコミットしても迷惑はかからない  <!-- .element: class="fragment" -->
 * 自分の PC にも好きにリポジトリが作れる <!-- .element: class="fragment" -->
   * ちょっとしたプロトタイプの実装に <!-- .element: class="fragment" -->
   * メモなどのバージョン管理に <!-- .element: class="fragment" -->
@@ -198,7 +199,7 @@
   * 目的ごとにブランチを切って平行作業が可能 <!-- .element: class="fragment" -->
   * 作業中に緊急の割り込み作業が入ってもブランチを切り替えるだけ <!-- .element: class="fragment" -->
 * 統合ブランチには常に完成した機能だけが含まれる <!-- .element: class="fragment" -->
-  * ブランチで開発を進めて、完成したら統合リポジトリにマージ <!-- .element: class="fragment" -->
+  * ブランチで開発を進めて、完成したら統合ブランチにマージ <!-- .element: class="fragment" -->
   * 誰かに見せるときには常に動作する状態 <!-- .element: class="fragment" -->
 * オフラインでもコミット可能 <!-- .element: class="fragment" -->
   * サーバーメンテナンス中でもコミット可能 <!-- .element: class="fragment" -->
@@ -232,6 +233,10 @@ etc... | △ | <span style="color: #ffd83b;">たくさん</span>
 
 --------------------------------------------------
 
+# <span style="color: #f34c27;">GitLab</span>、<span style="color: #f34c27;">Git</span> を使って
+
+--------------------------------------------------
+
 ## <span style="color: #c5de00;">プルリクエスト</span>開発プロセス
 
 1. ローカルリポジトリでブランチを作成する <!-- .element: class="fragment" -->
@@ -243,14 +248,14 @@ etc... | △ | <span style="color: #ffd83b;">たくさん</span>
 7. 実装が完了したらレビュー依頼を出す <!-- .element: class="fragment" -->
 8. レビューをして、GitLab で指摘事項などを記入する <!-- .element: class="fragment" -->
 9. 指摘事項に対し、議論および修正をする <!-- .element: class="fragment" -->
-10. 8、9 を繰り返し、指摘事項がなくなったら、統合リポジトリにマージする <!-- .element: class="fragment" -->
+10. 8、9 を繰り返し、指摘事項がなくなったら、統合ブランチにマージする <!-- .element: class="fragment" -->
 
 ---
 
-## 1. ローカルリポジトリでブランチを作成する。
+## 1. ローカルリポジトリでブランチを作成する
 
 ```
-$ git checkout -b change-output-text
+$ git checkout -b <ブランチ名>
 ```
 
 ブランチの単位は、機能やバグ対応ごと
@@ -261,7 +266,7 @@ $ git checkout -b change-output-text
 
 ```
 $ git commit --allow-empty -m "wip"
-$ git push origin change-output-text
+$ git push origin <ブランチ名>
 ```
 
 ---
@@ -317,10 +322,9 @@ $ git push
 
 ## 7.1. レビュー依頼の記入
 
-[WIP] を取り除き、@レビュアーで依頼を記入する
-
-※WIP があるとマージできないように制御される
-
+[WIP] を取り除き、「@ + レビュアー」で依頼を記入する
+* 「@ + レビュアー」には、@ + ユーザー名、グループ名、all が指定可能 <!-- .element: style="font-size: 75%;" -->
+* WIP があるとマージできないように制御される <!-- .element: style="font-size: 75%;" -->
 ![GitLab でレビュー依頼](/sections/img/hello-world/16.png)
 
 ---
@@ -329,7 +333,7 @@ $ git push
 
 ![GitLab でレビュー依頼後の表示](/sections/img/hello-world/17.png)
 
-→ @ + ユーザー名、グループ名、all で登録してあるメールアドレスに自動的にメッセージが飛ぶ <!-- .element: style="font-size: 60%;" -->
+「@ + レビュアー」で登録してあるメールアドレスに自動的にメールが送信される <!-- .element: style="font-size: 65%;" -->
 
 ---
 
@@ -337,7 +341,7 @@ $ git push
 
 ---
 
-## 8.1. 統合リポジトリとブランチの差分
+## 8.1. 統合ブランチとの差分を確認
 
 ![GitLab での差分](/sections/img/hello-world/18.png)
 
@@ -353,8 +357,9 @@ $ git push
 
 ---
 
-## 8.3. テスト、動作確認のしかた
-## (レビュアー)
+## 8.3. テスト、動作確認 (レビュアー)
+
+動作確認はローカルで行うので… <!-- .element: style="text-align: left;" -->
 
 #### 1. リモートリポジトリからブランチを取得する <!-- .element: style="text-align: left;" -->
 
@@ -364,6 +369,8 @@ $ git checkout -b <PRブランチ> origin/<PRブランチ>
 ```
 
 #### 2. 動作確認や、テストの実行をして問題がないか確かめる <!-- .element: style="text-align: left;" -->
+* 自動テスト
+* 手動での動作確認
 
 ---
 
@@ -371,7 +378,7 @@ $ git checkout -b <PRブランチ> origin/<PRブランチ>
 
 ---
 
-## 10. 8、9 を繰り返し、指摘事項がなくなったら、統合リポジトリにマージする
+## 10. 8、9 を繰り返し、指摘事項がなくなったら、統合ブランチにマージする
 
 ---
 
@@ -417,8 +424,7 @@ $ git branch -D <PRブランチ>
 * レビュー時期が遅くなることによる弊害
   * → WIP プルリクエストで実装着手と同時にレビュー (議論) が可能 <!-- .element: class="fragment" style="list-style-type: none;" -->
 * 会議のコスト
-  * → 集合する必要がない (周知したい内容があればレビューとは別に) <!-- .element: class="fragment" style="list-style-type: none;" -->
-  * → レビュアーの都合のよいタイミングでレビュー <!-- .element: class="fragment" style="list-style-type: none;" -->
+  * → 集合する必要がなく、レビュアーの都合のよいタイミングでレビュー <!-- .element: class="fragment" style="list-style-type: none;" -->
 
 ---
 
@@ -430,15 +436,13 @@ $ git branch -D <PRブランチ>
 
 ### <span class="fragment">同様に<span style="color: #c5de00;">プルリクエスト</span>は「<span style="color: #ff2c2d;">誰がどんな開発をしていて、それがどう取り込まれたか</span>」をソースコードレベルで<span style="color: #ffd83b;">見える化</span>する</span>
 
-
-
 --------------------------------------------------
 
 ## ブランチ戦略
 
 <span style="color: #f34c27;">Git</span> は自由度が高いので運用を考えたブランチ戦略が重要
 
-確実にブランチ戦略に従って運用する
+確実にブランチ戦略を理解して運用する
 
 ---
 
@@ -451,7 +455,7 @@ $ git branch -D <PRブランチ>
 
 ---
 
-## ○○○○の場合、<span style="color: #f34c27;">Git Flow</span> をベースにすればよさそう
+## パッケージ開発の場合、<span style="color: #f34c27;">Git Flow</span> をベースにすればよさそう
 
 詳しくは… <!-- .element: style="text-align: left; color: #9FA0A0;" -->
 
@@ -534,11 +538,13 @@ $ git branch -D <PRブランチ>
 
 ---
 
+#### <span style="text-decoration: line-through;">GitHub クローン</span>ではなく、
 ## <span style="color: #f34c27;">GitHub</span> を勧める理由
 
 * 世界標準の開発環境
 * プライベートで利用している人が多いため教育コストの削減に
 * リポジトリサーバーのメンテナンスが不要
+* 最先端企業が運営しているため、自社サーバーよりセキュリティが高い
 
 ---
 
@@ -557,12 +563,12 @@ $ git branch -D <PRブランチ>
 
 --------------------------------------------------
 
-## Backlog <!-- .element: style="color: #49a62e;" -->
+## <span style="color: #49a62e;">Backlog</span> の紹介
 
 * じょうれいくんで導入済み (ただし、チケット管理だけ)
 * <span style="color: #f34c27;">Git</span>、<span style="color: #98b0d6;">Subversion</span> に両対応
 * エンジニア以外にもやさしい UI
-* アジャイル開発にも！ (バーンダウンチャート)
+* アジャイル開発にも！ (バーンダウンチャートなど)
 
 ---
 
@@ -570,7 +576,7 @@ $ git branch -D <PRブランチ>
 
 --------------------------------------------------
 
-## おすすめ資料
+## <span style="color: #f34c27;">Git</span>、<span style="color: #f34c27;">GitHub</span> のおすすめ資料
 
 * こわくない Git: http://www.slideshare.net/kotas/git-15276118
 * GitHub実践入門: http://gihyo.jp/book/2014/978-4-7741-6366-6
