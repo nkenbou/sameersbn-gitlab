@@ -208,6 +208,7 @@
 ---
 
 <!-- .slide: data-background="/sections/img/google-trend-git-vs-svn.png" -->
+&nbsp;
 
 ---
 
@@ -464,10 +465,12 @@ $ git branch -D <PRブランチ>
 ---
 
 <!-- .slide: data-background="/sections/img/GitFlow.png" data-background-size="38%" -->
+&nbsp;
 
 ---
 
 <!-- .slide: data-background="/sections/img/GitFlow-PIXS.svg" data-background-size="38%" -->
+&nbsp;
 
 ---
 
@@ -573,6 +576,7 @@ $ git branch -D <PRブランチ>
 ---
 
 <!-- .slide: data-background="/sections/img/Backlog.png" data-background-size="55%" -->
+&nbsp;
 
 --------------------------------------------------
 
