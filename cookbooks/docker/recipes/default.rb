@@ -6,6 +6,10 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+package "curl" do
+  action :install
+end
+
 bash "install docker" do
   code <<-EOC
     curl -sSL https://get.docker.com/ | sh
