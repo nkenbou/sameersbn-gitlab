@@ -2,7 +2,7 @@ gitlab-mysql:
   container_name: gitlab-mysql
   image: sameersbn/mysql:latest
   volumes:
-    - /vagrant/docker/gitlab/mysql/data:/var/lib/mysql
+    - /vagrant/docker/gitlab/mysql:/var/lib/mysql
     - /vagrant/docker/gitlab/log/mysql:/var/log/mysql
   environment:
     DB_NAME: gitlabhq_production
@@ -13,7 +13,7 @@ gitlab-redis:
   container_name: gitlab-redis
   image: sameersbn/redis:latest
   volumes:
-    - /vagrant/docker/gitlab/redis/data:/var/lib/redis
+    - /vagrant/docker/gitlab/redis:/var/lib/redis
     - /vagrant/docker/gitlab/log/redis:/var/log/redis
 
 gitlab:
@@ -27,6 +27,6 @@ gitlab:
     - "80"
     - "443"
   volumes:
-    - /vagrant/docker/gitlab/gitlab/data:/home/git/data
+    - /vagrant/docker/gitlab/gitlab:/home/git/data
     - /vagrant/docker/gitlab/log/gitlab:/var/log/gitlab
   env_file: .env
