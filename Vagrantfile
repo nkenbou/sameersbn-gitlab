@@ -52,7 +52,7 @@ Vagrant.configure(2) do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
 
   # ./gitlab/docker-compose.yml の gitlab-mysql: volumes: と合わせること
-  config.vm.synced_folder "./docker/gitlab/mysql/data", "/vagrant/docker/gitlab/mysql/data",
+  config.vm.synced_folder "./docker/gitlab/mysql", "/vagrant/docker/gitlab/mysql",
                           :create => true,
                           :owner => "messagebus",
                           :group => "messagebus"
@@ -98,6 +98,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "chef_zero" do |chef|
     chef.cookbooks_path = "cookbooks"
     chef.add_recipe "docker"
+    chef.nodes_path = "nodes"
   end
 
   config.vm.provision "shell", inline: <<-PREPARE
