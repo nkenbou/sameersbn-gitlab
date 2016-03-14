@@ -2,5 +2,5 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem 'chef', '~> 11.18.12'
-gem 'knife-zero', '~> 1.8.0'
+gem 'chef', '~> 12.8.1'
+gem 'knife-zero', '~> 1.15.2'

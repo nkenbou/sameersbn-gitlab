@@ -11,6 +11,7 @@ vendor/bundle/*
 
 clients
 nodes
+encrypted_data_bag_secret
 
 dproxy/linked/src/github.com
 dproxy/linked/pkg
