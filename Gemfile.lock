@@ -182,8 +182,8 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  chef
-  knife-zero
+  chef (~> 12.8.1)
+  knife-zero (~> 1.15.2)
 
 BUNDLED WITH
    1.10.6
