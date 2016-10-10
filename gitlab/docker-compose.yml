@@ -3,15 +3,17 @@ version: "2"
 services:
   redis:
     image: sameersbn/redis:latest
+    command:
+      - --loglevel warning
     volumes:
-      - /vagrant/docker/gitlab/redis:/var/lib/redis
-      - /vagrant/docker/gitlab/log/redis:/var/log/redis
+      - /vagrant/docker/gitlab/redis:/var/lib/redis:Z
+      - /vagrant/docker/gitlab/log/redis:/var/log/redis:Z
 
   mysql:
     image: sameersbn/mysql:latest
     volumes:
-      - /vagrant/docker/gitlab/mysql:/var/lib/mysql
-      - /vagrant/docker/gitlab/log/mysql:/var/log/mysql
+      - /vagrant/docker/gitlab/mysql:/var/lib/mysql:Z
+      - /vagrant/docker/gitlab/log/mysql:/var/log/mysql:Z
     environment:
       DB_NAME: gitlabhq_production
       DB_USER: gitlab
@@ -19,7 +21,7 @@ services:
 
   gitlab:
     container_name: gitlab
-    image: sameersbn/gitlab:8.5.4-1
+    image: sameersbn/gitlab:8.12.4
     depends_on:
       - redis
       - mysql
@@ -28,8 +30,8 @@ services:
       - "443"
       - "10022:22"
     volumes:
-      - /vagrant/docker/gitlab/gitlab:/home/git/data
-      - /vagrant/docker/gitlab/log/gitlab:/var/log/gitlab
+      - /vagrant/docker/gitlab/gitlab:/home/git/data:Z
+      - /vagrant/docker/gitlab/log/gitlab:/var/log/gitlab:Z
     env_file: .env
     environment:
       - DB_ADAPTER=mysql2
