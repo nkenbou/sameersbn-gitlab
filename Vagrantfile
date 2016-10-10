@@ -100,7 +100,7 @@ Vagrant.configure(2) do |config|
     echo "Asia/Tokyo" | tee /etc/timezone
     dpkg-reconfigure --frontend noninteractive tzdata
 
-    docker-compose -f /vagrant/nginx-proxy/docker-compose.yml up -d
     docker-compose -f /vagrant/gitlab/docker-compose.yml up -d
+    docker-compose -f /vagrant/nginx-proxy/docker-compose.yml up -d
   PREPARE
 end
