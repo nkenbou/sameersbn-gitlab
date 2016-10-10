@@ -1,32 +1,42 @@
-gitlab-mysql:
-  container_name: gitlab-mysql
-  image: sameersbn/mysql:latest
-  volumes:
-    - /vagrant/docker/gitlab/mysql:/var/lib/mysql
-    - /vagrant/docker/gitlab/log/mysql:/var/log/mysql
-  environment:
-    DB_NAME: gitlabhq_production
-    DB_USER: gitlab
-    DB_PASS: password
+version: "2"
 
-gitlab-redis:
-  container_name: gitlab-redis
-  image: sameersbn/redis:latest
-  volumes:
-    - /vagrant/docker/gitlab/redis:/var/lib/redis
-    - /vagrant/docker/gitlab/log/redis:/var/log/redis
+services:
+  redis:
+    image: sameersbn/redis:latest
+    volumes:
+      - /vagrant/docker/gitlab/redis:/var/lib/redis
+      - /vagrant/docker/gitlab/log/redis:/var/log/redis
 
-gitlab:
-  container_name: gitlab
-  image: sameersbn/gitlab:8.5.4-1
-  links:
-    - gitlab-mysql:mysql
-    - gitlab-redis:redisio
-  ports:
-    - "10022:22"
-    - "80"
-    - "443"
-  volumes:
-    - /vagrant/docker/gitlab/gitlab:/home/git/data
-    - /vagrant/docker/gitlab/log/gitlab:/var/log/gitlab
-  env_file: .env
+  mysql:
+    image: sameersbn/mysql:latest
+    volumes:
+      - /vagrant/docker/gitlab/mysql:/var/lib/mysql
+      - /vagrant/docker/gitlab/log/mysql:/var/log/mysql
+    environment:
+      DB_NAME: gitlabhq_production
+      DB_USER: gitlab
+      DB_PASS: password
+
+  gitlab:
+    container_name: gitlab
+    image: sameersbn/gitlab:8.5.4-1
+    depends_on:
+      - redis
+      - mysql
+    ports:
+      - "80"
+      - "443"
+      - "10022:22"
+    volumes:
+      - /vagrant/docker/gitlab/gitlab:/home/git/data
+      - /vagrant/docker/gitlab/log/gitlab:/var/log/gitlab
+    env_file: .env
+    environment:
+      - DB_ADAPTER=mysql2
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_USER=gitlab
+      - DB_PASS=password
+      - DB_NAME=gitlabhq_production
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379

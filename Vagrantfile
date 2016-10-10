@@ -7,11 +7,6 @@ $vb_gui = false
 $vb_memory = 2048
 $vb_cpus = 1
 
-GITLAB_CONFIG = File.join(File.dirname(__FILE__), "gitlab/config.rb")
-if File.exist?(GITLAB_CONFIG)
-  require GITLAB_CONFIG
-end
-
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
@@ -105,7 +100,7 @@ Vagrant.configure(2) do |config|
     echo "Asia/Tokyo" | tee /etc/timezone
     dpkg-reconfigure --frontend noninteractive tzdata
 
-    docker-compose -f /vagrant/dproxy/docker-compose.yml up -d
+    docker-compose -f /vagrant/nginx-proxy/docker-compose.yml up -d
     docker-compose -f /vagrant/gitlab/docker-compose.yml up -d
   PREPARE
 end

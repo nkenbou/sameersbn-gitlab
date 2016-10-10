@@ -25,11 +25,6 @@ bash "install docker-compose" do
   not_if 'which docker-compose'
 end
 
-cookbook_file "/etc/default/docker" do
-  mode 00644
-  notifies :restart, 'service[docker]'
-end
-
 service "docker" do
   provider Chef::Provider::Service::Upstart
   action [ :enable, :start ]

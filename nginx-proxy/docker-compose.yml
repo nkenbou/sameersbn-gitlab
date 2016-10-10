@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  nginx-proxy:
+    container_name: nginx-proxy
+    image: jwilder/nginx-proxy:latest
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - default
+      - gitlab_default
+
+networks:
+  gitlab_default:
+    external: true
