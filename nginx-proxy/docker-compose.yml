@@ -6,7 +6,9 @@ services:
     image: jwilder/nginx-proxy:latest
     ports:
       - "80:80"
+      - "443:443"
     volumes:
+      - /vagrant/nginx-proxy/certs:/etc/nginx/certs
       - /var/run/docker.sock:/tmp/docker.sock:ro
     networks:
       - gitlab_default
