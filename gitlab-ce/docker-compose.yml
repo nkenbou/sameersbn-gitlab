@@ -18,6 +18,7 @@ services:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'https://gitlab.192.168.33.10.xip.io'
         registry_external_url 'https://registry.192.168.33.10.xip.io'
+        mattermost_external_url 'https://mattermost.192.168.33.10.xip.io'
         user['uid'] = 998
         user['gid'] = 998
         gitlab_rails['time_zone'] = 'Asia/Tokyo'
@@ -36,7 +37,10 @@ services:
         nginx['ssl_certificate_key'] = '/etc/gitlab/ssl/common.key'
         registry_nginx['ssl_certificate'] = '/etc/gitlab/ssl/common.crt'
         registry_nginx['ssl_certificate_key'] = '/etc/gitlab/ssl/common.key'
-      VIRTUAL_HOST: gitlab.192.168.33.10.xip.io,registry.192.168.33.10.xip.io
+        mattermost_nginx['ssl_certificate'] = '/etc/gitlab/ssl/common.crt'
+        mattermost_nginx['ssl_certificate_key'] = '/etc/gitlab/ssl/common.key'
+        mattermost['service_enable_insecure_outgoing_connections'] = true
+      VIRTUAL_HOST: gitlab.192.168.33.10.xip.io,registry.192.168.33.10.xip.io,mattermost.192.168.33.10.xip.io
       VIRTUAL_PROTO: https
       VIRTUAL_PORT: 443
       CERT_NAME: common
