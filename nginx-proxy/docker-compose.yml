@@ -12,7 +12,10 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     networks:
       - gitlab_default
+      - gitlabce_default
 
 networks:
   gitlab_default:
+    external: true
+  gitlabce_default:
     external: true

@@ -4,7 +4,7 @@
 
 # Defaults for config options defined in CONFIG
 $vb_gui = false
-$vb_memory = 2048
+$vb_memory = 3072
 $vb_cpus = 1
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
