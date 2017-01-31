@@ -17,6 +17,7 @@ services:
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'https://gitlab.192.168.33.10.xip.io'
+        registry_external_url 'https://registry.192.168.33.10.xip.io'
         user['uid'] = 998
         user['gid'] = 998
         gitlab_rails['time_zone'] = 'Asia/Tokyo'
@@ -33,7 +34,9 @@ services:
         gitlab_rails['smtp_openssl_verify_mode'] = 'peer'
         nginx['ssl_certificate'] = '/etc/gitlab/ssl/common.crt'
         nginx['ssl_certificate_key'] = '/etc/gitlab/ssl/common.key'
-      VIRTUAL_HOST: gitlab.192.168.33.10.xip.io
+        registry_nginx['ssl_certificate'] = '/etc/gitlab/ssl/common.crt'
+        registry_nginx['ssl_certificate_key'] = '/etc/gitlab/ssl/common.key'
+      VIRTUAL_HOST: gitlab.192.168.33.10.xip.io,registry.192.168.33.10.xip.io
       VIRTUAL_PROTO: https
       VIRTUAL_PORT: 443
       CERT_NAME: common
