@@ -49,15 +49,18 @@ services:
     build:
       context: ./redmine
     ports:
-      - "10081:3000"
+      - "3000"
     volumes:
       - redmine-files:/usr/src/redmine/files
+      - /vagrant/gitlab-ce/redmine/plugins:/usr/src/redmine/plugins
     volumes_from:
       - gitlab
     environment:
       REDMINE_DB_POSTGRES: postgres
       REDMINE_DB_USERNAME: redmine
       REDMINE_DB_PASSWORD: example
+      VIRTUAL_HOST: redmine.192.168.33.10.xip.io
+      CERT_NAME: common
     depends_on:
       - postgres
   postgres:
